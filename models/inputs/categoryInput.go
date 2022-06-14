@@ -1,0 +1,13 @@
+package inputs
+
+type CreateCategory struct {
+	Type string `json:"type" binding:"required"`
+}
+
+type UpdateCategory struct {
+	Type string `json:"type" binding:"required"`
+}
+
+type DeleteCategory struct {
+	ID int `uri:"id" binding:"required"`
+}
