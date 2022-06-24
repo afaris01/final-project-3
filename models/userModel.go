@@ -1,8 +1,6 @@
 package models
 
 import (
-	"final-project-3/helpers"
-
 	"github.com/asaskevich/govalidator"
 	"gorm.io/gorm"
 )
@@ -28,8 +26,6 @@ func (u *User) BeforeCreate(tx *gorm.DB) (err error) {
 		err = errCreate
 		return
 	}
-
-	u.Password = helpers.HashPass(u.Password)
 
 	err = nil
 	return
