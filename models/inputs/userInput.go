@@ -1,7 +1,7 @@
 package inputs
 
 type RegisterUserInput struct {
-	FullName string `json:"full_name" binding:"required"`
+	FullName string `json:"fullname" binding:"required"`
 	Email    string `json:"email" binding:"required"`
 	Password string `json:"password" binding:"required"`
 }
@@ -12,6 +12,6 @@ type LoginUserInput struct {
 }
 
 type UpdateUserInput struct {
-	FullName string `json:"full_name"`
+	FullName string `json:"fullname"`
 	Email    string `json:"email"`
 }
